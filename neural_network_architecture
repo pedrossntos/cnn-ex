@@ -1,0 +1,29 @@
+digraph {
+	rankdir=LR
+	Layer0 [label="Input Layer
+(28x28x1)" fillcolor=lightblue fontname=Helvetica fontsize=12 height=1.0 shape=rect style=filled width=2.0]
+	Layer1 [label="Conv2D Layer 1
+(32 filters 5x5)" fillcolor=lightblue fontname=Helvetica fontsize=12 height=1.0 shape=rect style=filled width=2.0]
+	Layer2 [label="Conv2D Layer 2
+(64 filters 5x5)" fillcolor=lightblue fontname=Helvetica fontsize=12 height=1.0 shape=rect style=filled width=2.0]
+	Layer3 [label="MaxPooling Layer
+(2x2 pool)" fillcolor=lightblue fontname=Helvetica fontsize=12 height=1.0 shape=rect style=filled width=2.0]
+	Layer4 [label="Dropout Layer 1
+(0.25)" fillcolor=lightblue fontname=Helvetica fontsize=12 height=1.0 shape=rect style=filled width=2.0]
+	Layer5 [label="Flatten
+(Flattened output)" fillcolor=lightblue fontname=Helvetica fontsize=12 height=1.0 shape=rect style=filled width=2.0]
+	Layer6 [label="Dense Layer 1
+(128 neurons)" fillcolor=lightblue fontname=Helvetica fontsize=12 height=1.0 shape=rect style=filled width=2.0]
+	Layer7 [label="Dropout Layer 2
+(0.5)" fillcolor=lightblue fontname=Helvetica fontsize=12 height=1.0 shape=rect style=filled width=2.0]
+	Layer8 [label="Output Layer
+(10 neurons)" fillcolor=lightblue fontname=Helvetica fontsize=12 height=1.0 shape=rect style=filled width=2.0]
+	Layer0 -> Layer1 [dir=forward]
+	Layer1 -> Layer2 [dir=forward]
+	Layer2 -> Layer3 [dir=forward]
+	Layer3 -> Layer4 [dir=forward]
+	Layer4 -> Layer5 [dir=forward]
+	Layer5 -> Layer6 [dir=forward]
+	Layer6 -> Layer7 [dir=forward]
+	Layer7 -> Layer8 [dir=forward]
+}
